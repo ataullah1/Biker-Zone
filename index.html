@@ -28,6 +28,18 @@
       .poppins {
         font-family: 'Poppins', sans-serif;
       }
+      .header-bg {
+        background: linear-gradient(
+            90deg,
+            #181818 0%,
+            rgba(24, 24, 24, 0.82) 24.48%,
+            rgba(24, 24, 24, 0) 100%
+          ),
+          url('./images/slider/headerbg.png');
+      }
+
+      @media screen and (max-width: 400) {
+      }
     </style>
 
     <!-- Custom Color Tailwind==== -->
@@ -45,17 +57,22 @@
   </head>
   <body class="poppins">
     <header class="text-white">
-      <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
+      <div class="carousel w-full h-full">
+        <div
+          id="slide1"
+          class="carousel-item relative w-full flex items-center justify-center h-[100vh] header-bg bg-center bg-cover"
+        >
           <div
-            class="navbar bg-base-100 bg-slate-600 bg-opacity-20 px-[10%] absolute top-12"
+            class="navbar flex flex-col sm:flex-row sm:justify-between bg-base-100 bg-slate-600 bg-opacity-20 px-[2%] sm:px-[10%] absolute top-8"
           >
-            <div class="navbar-start">
+            <div
+              class="navbar-start flex flex-row-reverse justify-between w-full sm:w-auto sm:flex-row"
+            >
               <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
+                    class="h-7 w-7 rotate-180 sm:rotate-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -70,7 +87,7 @@
                 </div>
                 <ul
                   tabindex="0"
-                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                  class="menu menu-sm dropdown-content mt-3 ml-[-140px] sm:ml-0 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
                     <a href="#" class="font-medium text-base">Home</a>
@@ -84,27 +101,92 @@
                   <li>
                     <a href="#" class="font-medium text-base">Contact</a>
                   </li>
-                  <div class="dropdown mb-72">
-                    <div tabindex="0" role="button" class="btn m-1">
+                  <div>
+                    <a
+                      class="btn bg-primary sm:hidden text-base font-bold w-full text-white"
+                      >Login</a
+                    >
+                  </div>
+                  <div class="dropdown mb-48">
+                    <div
+                      tabindex="0"
+                      role="button"
+                      class="btn mt-2 w-full bg-slate-100 text-black"
+                    >
                       Theme
-                      <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg>
+                      <svg
+                        width="12px"
+                        height="12px"
+                        class="h-2 w-2 fill-current opacity-60 inline-block"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 2048 2048"
+                      >
+                        <path
+                          d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+                        ></path>
+                      </svg>
                     </div>
-                    <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
-                      <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Default" value="default"/></li>
-                      <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Retro" value="retro"/></li>
-                      <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Cyberpunk" value="cyberpunk"/></li>
-                      <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Valentine" value="valentine"/></li>
-                      <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Aqua" value="aqua"/></li>
+                    <ul
+                      tabindex="0"
+                      class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-full"
+                    >
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                          aria-label="Default"
+                          value="default"
+                        />
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                          aria-label="Retro"
+                          value="retro"
+                        />
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                          aria-label="Cyberpunk"
+                          value="cyberpunk"
+                        />
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                          aria-label="Valentine"
+                          value="valentine"
+                        />
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                          aria-label="Aqua"
+                          value="aqua"
+                        />
+                      </li>
                     </ul>
                   </div>
                 </ul>
               </div>
-              <a href="#" class="btn btn-ghost poppins text-4xl font-bold"
+              <a
+                href="#"
+                class="btn btn-ghost poppins text-3xl sm:text-4xl sm:text-left font-bold"
                 >Snowy Bike</a
               >
             </div>
             <div class="navbar-end">
-              <div class="navbar-center hidden md:flex">
+              <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
                   <li>
                     <a href="#" class="font-medium text-base">Home</a>
@@ -120,12 +202,97 @@
                   </li>
                 </ul>
               </div>
-              <a class="btn bg-primary text-xl font-bold px-12 text-white"
-                >Login</a
-              >
+              <div class="hidden sm:block">
+                <a
+                  class="btn bg-primary text-base sm:text-xl font-bold px-8 sm:px-12 text-white"
+                  >Login</a
+                >
+              </div>
+              <div class="hidden lg:block">
+                <div
+                  class="dropdown mb-72 flex gap-2 absolute top-2 xl:right-2 lg:right-0"
+                >
+                  <div
+                    tabindex="0"
+                    role="button"
+                    class="btn m-1 bg-white text-black hover:bg-orange-200"
+                  >
+                    Theme
+                    <svg
+                      width="12px"
+                      height="12px"
+                      class="h-2 w-2 fill-current opacity-60 inline-block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 2048 2048"
+                    >
+                      <path
+                        d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="dropdown-content z-[1] mt-14 p-2 shadow-2xl bg-base-300 rounded-lg w-full"
+                  >
+                    <li>
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                        aria-label="Default"
+                        value="default"
+                      />
+                    </li>
+                    <li>
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                        aria-label="Retro"
+                        value="retro"
+                      />
+                    </li>
+                    <li>
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                        aria-label="Cyberpunk"
+                        value="cyberpunk"
+                      />
+                    </li>
+                    <li>
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                        aria-label="Valentine"
+                        value="valentine"
+                      />
+                    </li>
+                    <li>
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                        aria-label="Aqua"
+                        value="aqua"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <img src="./images/slider/headerbg.png" class="w-full h-full" />
+          <div class="h-2/4 w-1/2">
+            <h1>Keep Your Ride Safe At Every Time</h1>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+            <button>Purchase</button>
+          </div>
           <div
             class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
           >

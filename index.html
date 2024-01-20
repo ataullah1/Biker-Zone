@@ -38,7 +38,12 @@
           url('./images/slider/headerbg.png');
       }
 
-      @media screen and (max-width: 400) {
+      .bg-primary {
+        border: 2px solid #e76f51;
+      }
+      .bg-primary:hover {
+        background-color: rgba(255, 166, 0, 0);
+        border: 2px solid #e76f51;
       }
     </style>
 
@@ -60,7 +65,7 @@
       <div class="carousel w-full h-full">
         <div
           id="slide1"
-          class="carousel-item relative w-full flex items-center justify-center h-[100vh] header-bg bg-center bg-cover"
+          class="carousel-item relative w-full flex items-center h-[100vh] header-bg bg-center bg-cover"
         >
           <div
             class="navbar flex flex-col sm:flex-row sm:justify-between bg-base-100 bg-slate-600 bg-opacity-20 px-[2%] sm:px-[10%] absolute top-8"
@@ -284,17 +289,26 @@
               </div>
             </div>
           </div>
-          <div class="h-2/4 w-1/2">
-            <h1>Keep Your Ride Safe At Every Time</h1>
-            <p>
+          <div class="h-2/4 px-[5%] sm:px-[10%]">
+            <h1
+              class="text-4xl sm:text-5xl md:text-[65px] font-bold leading-[60px] sm:leading-[85px]"
+            >
+              Keep Your Ride Safe <br />
+              At Every Time
+            </h1>
+            <p class="text-base font-light leading-6 w-4/5 lg:w-1/2 pt-7 pb-10">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
             </p>
-            <button>Purchase</button>
+            <button
+              class="btn btn-error bg-primary text-white text-lg sm:text-xl font-semibold"
+            >
+              Purchase
+            </button>
           </div>
           <div
-            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            class="absolute flex justify-between transform sm:-translate-y-1/2 left-5 right-5 bottom-4 sm:bottom-auto sm:top-1/2"
           >
             <a
               href="#slide4"

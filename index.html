@@ -1260,11 +1260,13 @@
         >
           Frequently Asked<span class="text-primary"> Questions</span>
         </h1>
-        <div class="w-full pt-28 pb-32 flex gap-20 inter">
-          <div class="w-2/5">
+        <div
+          class="w-full pt-28 pb-4 flex flex-col lg:flex-row gap-6 lg:gap-20 items-center inter"
+        >
+          <div class="w-3/5 m-auto lg:w-2/5">
             <img class="w-full" src="./images/others/faq.png" alt="" />
           </div>
-          <div class="w-3/5 flex flex-col gap-2">
+          <div class="w-full lg:w-3/5 flex flex-col gap-2">
             <div
               class="collapse collapse-arrow bg-base-200 bg-white border boreder border-solid border-[#D5E5FB]"
             >
@@ -1343,5 +1345,32 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer section ============ -->
+    <footer
+      class="pt-14 pb-20 bg-[#0B0D17] px-[2%] sm:px-[10%] m-auto flex flex-col gap-10 md:gap-0 md:flex-row justify-between"
+    >
+      <div>
+        <div class="flex gap-5">
+          <p>Download Now</p>
+          <p>License</p>
+        </div>
+        <div class="pt-3 pb-6 flex flex-col sm:flex-row gap-5">
+          <a href="#">About</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Careers</a>
+          <a href="#">Help</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <p class="hidden md:block">© 2020 bike. All rights reserved</p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <p>Get the App</p>
+        <img class="max-w-32" src="./images/others/android.png" alt="" />
+        <img class="max-w-32" src="./images/others/ios.png" alt="" />
+      </div>
+      <p class="md:hidden block text-center">© 2020 bike. All rights reserved</p>
+    </footer>
   </body>
 </html>
